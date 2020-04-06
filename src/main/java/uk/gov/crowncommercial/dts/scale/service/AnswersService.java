@@ -21,6 +21,7 @@ public class AnswersService {
   private static final String GRAPH_UUID_QI_MOD_LOCATION = "b879dae4-654e-11ea-bc55-0242ac130003";
   private static final String GRAPH_UUID_QI_MOD_SERVICES = "b879d86e-654e-11ea-bc55-0242ac130003";
   private static final String GRAPH_UUID_AGMT_FM2_LOT3_FC = "b879e250-654e-11ea-bc55-0242ac130003";
+  private static final String GRAPH_UUID_CCS_SUPPORT = "ccb5beb6-75b5-11ea-bc55-0242ac130003";
 
   // Non MOD branch
   private static final String GRAPH_UUID_AGMT_FM2_LOT2C_FC = "b879e386-654e-11ea-bc55-0242ac130003";
@@ -91,7 +92,7 @@ public class AnswersService {
 
     // Other not on list - route to Facilities Marketplace
     Answer other =
-        new Answer("Other", "b879bf0a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
+        new Answer("Other", "b879bf0a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_CCS_SUPPORT);
 
 
     MOD_ANSWERS.addAll(Stream.of(housing, gfm, catering, cleaning, compFMgmt, contractMgmt,
