@@ -1,3 +1,7 @@
 server:
   port: 8081
+  
+logging:
+  level:
+    uk.gov.crowncommercial.dts.scale: DEBUG  
     

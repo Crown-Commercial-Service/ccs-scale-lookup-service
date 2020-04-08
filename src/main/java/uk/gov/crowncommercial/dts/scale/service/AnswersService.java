@@ -53,44 +53,68 @@ public class AnswersService {
 
   private static final void populateMODAnswers() {
     // Housing - route to Select Location Question
-    Answer housing =
-        new Answer("Housing", "b87a0136-654e-11ea-bc55-0242ac130003", GRAPH_UUID_QI_MOD_LOCATION);
+    Answer housing = Answer.builder().text("Housing").uuid("b87a0136-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_QI_MOD_LOCATION).order(1).build();
 
     // Others on list (security, catering etc) - route to FM2 Lot 3 Further Comp
-    Answer catering =
-        new Answer("Catering", "b879aede-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer cleaning =
-        new Answer("Cleaning", "b879b00a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer compFMgmt = new Answer("Computer aided facility management (CAFM)",
-        "b87a0226-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer contractMgmt = new Answer("Contract management", "b879b28a-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer contractMobil = new Answer("Contract mobilisation",
-        "b879b352-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer helpdesk =
-        new Answer("Helpdesk", "b87a0334-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer hortic = new Answer("Horticultural", "b87a0532-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer maintenance = new Answer("Maintenance", "b879b64a-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer mgmtBillWP = new Answer("Management of billable works and projects",
-        "b879b64a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer miscFM = new Answer("Miscellaneous facility management services",
-        "b879b96a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer reception = new Answer("Reception", "b879ba32-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM2_LOT3_FC);
+    Answer catering = Answer.builder().text("Catering").uuid("b879aede-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(2).build();
+    Answer cleaning = Answer.builder().text("Cleaning").uuid("b879b00a-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(3).build();
+
+    Answer compFMgmt = Answer.builder().text("Computer aided facility management (CAFM)")
+        .uuid("b87a0226-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC)
+        .order(4).build();
+
+    Answer contractMgmt =
+        Answer.builder().text("Contract management").uuid("b879b28a-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(5).build();
+
+    Answer contractMobil =
+        Answer.builder().text("Contract mobilisation").uuid("b879b352-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(6).build();
+
+    Answer helpdesk = Answer.builder().text("Helpdesk").uuid("b87a0334-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(7).build();
+
+    Answer hortic =
+        Answer.builder().text("Horticultural").uuid("b87a0532-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(8).build();
+
+    Answer maintenance =
+        Answer.builder().text("Maintenance").uuid("b879b64a-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(9).build();
+
+    Answer mgmtBillWP = Answer.builder().text("Management of billable works and projects")
+        .uuid("b879b64a-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC)
+        .order(10).build();
+
+    Answer miscFM = Answer.builder().text("Miscellaneous facility management services")
+        .uuid("b879b96a-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC)
+        .order(11).build();
+
+    Answer reception =
+        Answer.builder().text("Reception").uuid("b879ba32-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(12).build();
+
     Answer securityServices =
-        new Answer("Security", "b879baf0-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer statutoryObgl = new Answer("Statutory obligations",
-        "b879bc44-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer waste =
-        new Answer("Waste", "b879bd02-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
-    Answer workplace = new Answer("Workplace facility management services",
-        "b879be42-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT3_FC);
+        Answer.builder().text("Security").uuid("b879baf0-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(13).build();
+
+    Answer statutoryObgl =
+        Answer.builder().text("Statutory obligations").uuid("b879bc44-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(14).build();
+
+    Answer waste = Answer.builder().text("Waste").uuid("b879bd02-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC).order(15).build();
+
+    Answer workplace = Answer.builder().text("Workplace facility management services")
+        .uuid("b879be42-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT3_FC)
+        .order(16).build();
 
     // Other not on list - route to Facilities Marketplace
-    Answer other =
-        new Answer("Other", "b879bf0a-654e-11ea-bc55-0242ac130003", GRAPH_UUID_CCS_SUPPORT);
+    Answer other = Answer.builder().text("Other").uuid("b879bf0a-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_CCS_SUPPORT).order(17).build();
 
 
     MOD_ANSWERS.addAll(Stream.of(housing, catering, cleaning, compFMgmt, contractMgmt,
@@ -100,44 +124,69 @@ public class AnswersService {
 
   private static void populateNonMODAnswers() {
     // Housing - route to Select Location Question
-    Answer housing =
-        new Answer("Housing", "b879e8d6-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM2_LOT2C_FC);
+    Answer housing = Answer.builder().text("Housing").uuid("b879e8d6-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM2_LOT2C_FC).order(1).build();
 
     // Security - route to sub-service question
-    Answer securityServices = new Answer("Security", "b879f7ea-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_QI_NON_MOD_SUB_SERVICE);
+    Answer securityServices =
+        Answer.builder().text("Security").uuid("b879f7ea-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_QI_NON_MOD_SUB_SERVICE).order(2).build();
 
     // Others on list (security, catering etc) - route to FM2 Lot 3 Further Comp
-    Answer catering = new Answer("Catering", "b879ec00-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer cleaning = new Answer("Cleaning", "b879ed18-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer compFMgmt = new Answer("Computer aided facility management (CAFM)",
-        "b879ee26-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer contractMgmt = new Answer("Contract management", "b879ef34-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer contractMobil = new Answer("Contract mobilisation",
-        "b879f042-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer helpdesk = new Answer("Helpdesk", "b879f146-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer hortic = new Answer("Horticultural", "b879f272-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer maintenance = new Answer("Maintenance", "b879f39e-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer mgmtBillWP = new Answer("Management of billable works and projects",
-        "b879f4ac-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer miscFM = new Answer("Miscellaneous facility management services",
-        "b879f5ba-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer reception = new Answer("Reception", "b879f6c8-654e-11ea-bc55-0242ac130003",
-        GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer statutoryObgl = new Answer("Statutory obligations",
-        "b879f902-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer waste =
-        new Answer("Waste", "b879f9f2-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer workplace = new Answer("Workplace facility management services",
-        "b879faf6-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
-    Answer other =
-        new Answer("Other", "b879fbe6-654e-11ea-bc55-0242ac130003", GRAPH_UUID_AGMT_FM_MARKETPLACE);
+    Answer catering = Answer.builder().text("Catering").uuid("b879ec00-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(3).build();
+
+    Answer cleaning = Answer.builder().text("Cleaning").uuid("b879ed18-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(4).build();
+
+    Answer compFMgmt = Answer.builder().text("Computer aided facility management (CAFM)")
+        .uuid("b879ee26-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE)
+        .order(5).build();
+
+    Answer contractMgmt =
+        Answer.builder().text("Contract management").uuid("b879ef34-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(6).build();
+
+    Answer contractMobil =
+        Answer.builder().text("Contract mobilisation").uuid("b879f042-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(7).build();
+
+    Answer helpdesk = Answer.builder().text("Helpdesk").uuid("b879f146-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(8).build();
+
+    Answer hortic =
+        Answer.builder().text("Horticultural").uuid("b879f272-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(9).build();
+
+    Answer maintenance =
+        Answer.builder().text("Maintenance").uuid("b879f39e-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(10).build();
+
+    Answer mgmtBillWP = Answer.builder().text("Management of billable works and projects")
+        .uuid("b879f4ac-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE)
+        .order(11).build();
+
+    Answer miscFM = Answer.builder().text("Miscellaneous facility management services")
+        .uuid("b879f5ba-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE)
+        .order(12).build();
+
+    Answer reception =
+        Answer.builder().text("Reception").uuid("b879f6c8-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(13).build();
+
+    Answer statutoryObgl =
+        Answer.builder().text("Statutory obligations").uuid("b879f902-654e-11ea-bc55-0242ac130003")
+            .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(14).build();
+
+    Answer waste = Answer.builder().text("Waste").uuid("b879f9f2-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(15).build();
+
+    Answer workplace = Answer.builder().text("Workplace facility management services")
+        .uuid("b879faf6-654e-11ea-bc55-0242ac130003").outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE)
+        .order(16).build();
+
+    Answer other = Answer.builder().text("Other").uuid("b879fbe6-654e-11ea-bc55-0242ac130003")
+        .outcomeUuid(GRAPH_UUID_AGMT_FM_MARKETPLACE).order(17).build();
 
     NON_MOD_ANSWERS.addAll(Stream.of(housing, catering, cleaning, compFMgmt, contractMgmt,
         contractMobil, helpdesk, hortic, maintenance, mgmtBillWP, miscFM, reception,
@@ -153,6 +202,5 @@ public class AnswersService {
     log.debug("getAnswer(answerUuid: {})", answerUuid);
     return ANSWER_UUID_TO_ANSWER.get(answerUuid);
   }
-
 
 }
